@@ -46,21 +46,62 @@ function getCompChoice() {
 }
 
 function win(user,comp){
+    var userThing;
+    if (user=="r"){
+        userThing="Rock";
+    }
+    if (user=="p"){
+        userThing="Paper";
+    }
+    if (user=="s"){
+        userThing="Scissors";
+    }
+    var compThing;
+    if (comp=="r"){
+        compThing="Rock";
+    }
+    if (comp=="p"){
+        compThing="Paper";
+    }
+    if (comp=="s"){
+        compThing="Scissors";
+    }
 	userScore++;
 	userScoreElem.innerHTML=userScore;
-	resultElem.innerHTML=user+" beats "+comp+" You Win."
+	resultElem.innerHTML=userThing+" beats "+compThing+", You Win."
 	resultImageElem.src = "imgs/"+user+comp+".gif";
 
 }
 function lose(user,comp){
+    var userThing;
+    if (user=="r"){
+        userThing="Rock";
+    }
+    if (user=="p"){
+        userThing="Paper";
+    }
+    if (user=="s"){
+        userThing="Scissors";
+    }
+    var compThing;
+    if (comp=="r"){
+        compThing="Rock";
+    }
+    if (comp=="p"){
+        compThing="Paper";
+    }
+    if (comp=="s"){
+        compThing="Scissors";
+    }
 	compScore++;
 	compScoreElem.innerHTML=compScore;
-	resultElem.innerHTML=comp+" beats "+user+" You Lose."
+	resultElem.innerHTML=compThing+" beats "+userThing+", You Lose."
 	resultImageElem.src = "imgs/"+user+comp+".gif";
 
 }
 function tie(user,comp){
 	resultElem.innerHTML="tie";
+    
 	resultImageElem.src = "imgs/"+user+comp+".png";
 
 }
