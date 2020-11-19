@@ -27,6 +27,9 @@ function game(userChoice) {
     	case "rp":
     	case "ps":
     	case "sr":
+        case "rb":
+        case "pb":
+        case "sb":
     		lose(userChoice,compChoice);
     		break;
     	case "rr":
@@ -38,8 +41,8 @@ function game(userChoice) {
 }
 
 function getCompChoice() {
-    const choices = ["r", "p", "s"];
-    const randNum = Math.floor(Math.random() * 3)
+    const choices = ["r", "p", "s","r", "p", "s","r", "p", "s","r", "p", "s","b"];
+    const randNum = Math.floor(Math.random() * 16)
     return choices[randNum];
 
 
@@ -92,6 +95,9 @@ function lose(user,comp){
     }
     if (comp=="s"){
         compThing="Scissors";
+    }
+    if (comp=="b"){
+        compThing="Black Hole";
     }
 	compScore++;
 	compScoreElem.innerHTML=compScore;
